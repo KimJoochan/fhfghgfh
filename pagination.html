@@ -1,0 +1,122 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://luis-almeida.github.io/jPages/css/jPages.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://luis-almeida.github.io/jPages/js/jPages.js"></script>
+    <style>
+        ul,
+        li {
+            list-style: none;
+        }
+
+        #itemContainer {
+            width: auto;
+            height: auto;
+            border: 1px solid #eee;
+            box-sizing: border-box;
+        }
+
+        #itemContainer>li {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .holder{
+            display: flex;
+            flex-direction: row;
+        }
+        .holder>a{
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 30px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navigation panel -->
+    <div class="holder">
+        <a class="jp-previous jp-disabled">← previous</a>
+        <a class="jp-current">1</a>
+        <span class="jp-hidden">...</span>
+        <a>2</a>
+        <a>3</a>
+        <a>4</a>
+        <a>5</a>
+        <a class="jp-hidden">6</a>
+        <a class="jp-hidden">7</a>
+        <a class="jp-hidden">8</a>
+        <a class="jp-hidden">9</a>
+        <span>...</span>
+        <a>10</a>
+        <a class="jp-next">next →</a>
+    </div>
+    <div class="customBtns">
+        <span class="arrowPrev"></span>
+        <span class="arrowNext"></span>
+    </div>
+    <ul id="itemContainer">
+        <!-- Items -->
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+    </ul>
+    <script>
+        $(document).ready(function() {
+            $("div.holder").jPages({
+                containerID: "itemContainer",
+                perPage: 2,
+                startPage: 1,
+                previous: "span.arrowPrev",
+                next: "span.arrowNext",
+                last: "last",
+                first: "first",
+            });
+        })
+    </script>
+</body></html>
